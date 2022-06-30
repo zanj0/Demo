@@ -1,6 +1,14 @@
 package com.example.demo.student;
 
 import java.time.LocalDate;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table
 public class Student {
 
     public Student() {
@@ -60,7 +68,8 @@ public class Student {
     public void setAge(Integer age) {
         this.age = age;
     }
-
+    @Id
+    @GeneratedValue
     private Long id;
     private String name;
     private LocalDate dateOfBirth;
