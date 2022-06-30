@@ -28,6 +28,7 @@ public class StudentController {
     @PostMapping
     public String addStudent(@RequestBody Student student) {
         System.out.println(student);
+
         studentService.addStudent(student);
         return "Student has been added successfully!";
     }
